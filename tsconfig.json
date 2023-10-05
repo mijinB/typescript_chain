@@ -4,6 +4,7 @@
       "outDir": "build",
       "target": "ES6",
       "lib": ["ES6", "DOM"],
-      "strict": true
+      "strict": true,
+      "allowJs": true   //typescript 안에 javascript를 허용한다는 것
     }
 }
