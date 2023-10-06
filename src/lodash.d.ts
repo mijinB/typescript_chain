@@ -7,4 +7,5 @@ declare module "lodash" {
     function hasIn<T>(object: IhasIn<T>, key: string): boolean;
     function isBoolean<T>(value: T): boolean;
     function toString<T>(value: T): string;
+    function split(string: string, separator: RegExp | string, limit: number): string[];
 }
