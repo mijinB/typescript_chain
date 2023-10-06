@@ -5,3 +5,11 @@ export function head(array) {
 export function hasIn(object, key) {
   return object != null && key in Object(object);
 }
+
+export function isBoolean(value) {
+  return (
+    value === true ||
+    value === false ||
+    (isObjectLike(value) && getTag(value) === '[object Boolean]')
+  );
+}

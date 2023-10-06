@@ -7,12 +7,13 @@ challenge 제출 코드(typescript 타입 정의 코드)는 "./lodash.d.ts" 파�
 현재 이 파일에는 잘 동작되는지 확인하는 코드들
 */
 
-import { head, hasIn } from "lodash";
+import { head, hasIn, isBoolean } from "lodash";
 
 //head.ts
-head({
-    array: [5, 2, 3],
-});
+head([5, 2, 3]);
 
 //hasIn.ts
 hasIn({ "dho": "dhkdl" }, "hello");
+
+//isBoolean.ts
+isBoolean("test");
