@@ -9,6 +9,7 @@ declare module "lodash" {
     function toString<T>(value: T): string;
     function split(string: string, separator: RegExp | string, limit: number): string[];
     function hasPath<T>(object: IObject<T>, path: T[] | string): boolean;
-    function filter<T>(array: T[], predicate: Function): IObject<T>[];
+    function filter<T>(array: T[], predicate: Function): T[];
     function every<T>(array: T[], predicate: Function): boolean;
+    function map<T>(array: T[], iteratee: Function): T[];
 }
