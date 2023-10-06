@@ -9,4 +9,5 @@ declare module "lodash" {
     function toString<T>(value: T): string;
     function split(string: string, separator: RegExp | string, limit: number): string[];
     function hasPath<T>(object: IObject<T>, path: T[] | string): boolean;
+    function filter<T>(array: IObject<T>[], predicate: Function): IObject<T>[];
 }

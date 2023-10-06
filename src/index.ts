@@ -7,7 +7,7 @@ challenge 제출 코드(typescript 타입 정의 코드)는 "./lodash.d.ts" 파�
 현재 이 파일에는 잘 동작되는지 확인하는 코드들
 */
 
-import { head, hasIn, isBoolean, toString, split, hasPath } from "lodash";
+import { head, hasIn, isBoolean, toString, split, hasPath, filter } from "lodash";
 
 //head.ts
 head([5, 2, 3]);
@@ -26,3 +26,10 @@ split("a-b-c", "-", 2);
 
 //hasPath.ts
 hasPath({ "dho": "dhkdl" }, ["a", "b"]);
+
+//filter.ts
+const users = [
+    { "user": "barney", "active": true },
+    { "user": "fred", "active": false },
+];
+filter(users, ({ active }: { active: boolean }) => active);
