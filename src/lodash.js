@@ -45,3 +45,30 @@ export function split(string, separator, limit) {
   }
   return string.split(separator, limit);
 }
+
+export function hasPath(object, path) {
+  path = castPath(path, object);
+
+  let index = -1;
+  let { length } = path;
+  let result = false;
+  let key;
+
+  while (++index < length) {
+    key = toKey(path[index]);
+    if (!(result = object != null && hasOwnProperty.call(object, key))) {
+      break;
+    }
+    object = object[key];
+  }
+  if (result || ++index !== length) {
+    return result;
+  }
+  length = object == null ? 0 : object.length;
+  return (
+    !!length &&
+    isLength(length) &&
+    isIndex(key, length) &&
+    (Array.isArray(object) || isArguments(object))
+  );
+}
