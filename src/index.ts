@@ -7,7 +7,7 @@ challenge 제출 코드(typescript 타입 정의 코드)는 "./lodash.d.ts" 파�
 현재 이 파일에는 잘 동작되는지 확인하는 코드들
 */
 
-import { head, hasIn, isBoolean, toString, split, hasPath, filter } from "lodash";
+import { head, hasIn, isBoolean, toString, split, hasPath, filter, every } from "lodash";
 
 //head.ts
 head([5, 2, 3]);
@@ -33,3 +33,6 @@ const users = [
     { "user": "fred", "active": false },
 ];
 filter(users, ({ active }: { active: boolean }) => active);
+
+//every.ts
+every([true, 1, null, "yes"], Boolean);
